@@ -114,7 +114,7 @@ suspect the hardware.
 
 ## The artwork pipeline
 
-The nine core state illustrations are AI-generated (one anchor image of the
+The fifteen state illustrations are AI-generated (one anchor image of the
 mascot, then every other state derived from it with the anchor as a style
 reference, via OpenRouter). They're committed as palette-indexed bitmap
 headers, so builds don't need any of this — but to regenerate or add states:
@@ -131,11 +131,6 @@ the firmware's own drawing code — check layouts before flashing anything.
 `orb/tools/decode_art.py` recovers a PNG (e.g. the `idle.png` style anchor
 gen_state_art.py needs) from a committed header when the generated sources
 are gone.
-
-The six per-error avatars (`art_err_*.h`) are currently programmatic
-derivations of the error art — same buddy, per-error pictogram composited on
-top. `gen_state_art.py` already carries scene prompts for them, so
-regenerating with the pipeline above swaps in fully illustrated versions.
 
 ![State artwork](docs/states.png)
 

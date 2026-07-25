@@ -32,8 +32,7 @@ STATES = {
     "paused": "The buddy leans back taking a break, holding a big rounded white pause symbol made of two vertical bars, calm expression.",
     "done": "The buddy celebrates joyfully, both arms up, holding a small wooden heart shape it just cut, with colorful confetti pieces falling around it.",
     "error": "The buddy looks worried with big concerned eyes and tiny sweat drop, next to a floating soft-red rounded warning triangle with an exclamation shape inside (iconic, not typographic).",
-    # per-error avatars — committed versions are programmatic derivations of
-    # "error" (see repo history); regenerate these for fully illustrated ones
+    # per-error avatars (M222 S-code faults, see xtool_s1.h)
     "err_flame": "The buddy is dressed as a brave little firefighter: a tiny red fire helmet perched on top (goggles pushed aside) and a small red fire extinguisher held in both stubby arms, spraying a soft white puff at one small stylized orange-and-yellow cartoon flame beside it, determined worried face.",
     "err_moved": "The buddy is tilted at a wobbly angle looking dizzy, swirly spiral eyes, stubby arms flung out to catch its balance, a few soft pale curved motion arcs around it.",
     "err_lid": "The buddy's own top lid is popped wide open on a hinge like an open toybox, and it looks up at its lid sheepish and embarrassed, one stubby arm scratching its head.",
