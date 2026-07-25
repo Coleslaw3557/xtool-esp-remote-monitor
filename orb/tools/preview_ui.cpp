@@ -47,7 +47,13 @@ int main(int argc, char **argv) {
       {"cut_long", ui::SCR_CUT, "REMAINING", true, 7509, 0.62f, false},
       {"paused", ui::SCR_PAUSE, "PAUSED", true, 754, 0.37f, true},
       {"done", ui::SCR_DONE, "DONE", true, 4212, 1.0f, false},
-      {"error", ui::SCR_ERROR, "ERROR", false, 0, -1, false},
+      {"setup", ui::SCR_ERROR, "SETUP MODE", false, 0, -1, true},
+      {"err_flame", ui::SCR_ERR_FLAME, "FLAME ALARM", false, 0, -1, false},
+      {"err_moved", ui::SCR_ERR_MOVED, "MOVED", false, 0, -1, false},
+      {"err_lid", ui::SCR_ERR_LID, "LID OPEN", false, 0, -1, false},
+      {"err_limit", ui::SCR_ERR_LIMIT, "HIT LIMIT", false, 0, -1, false},
+      {"err_wifi", ui::SCR_ERR_WIFI, "WIFI FAULT", false, 0, -1, false},
+      {"err_laser", ui::SCR_ERR_LASER, "LASER FAULT", false, 0, -1, false},
   };
   for (const Case &c : CASES) {
     ui::expandArt(layer, ui::STATE_ART[c.scr].pal, ui::STATE_ART[c.scr].px,

@@ -6,6 +6,12 @@
 
 #include "art_cutting.h"
 #include "art_done.h"
+#include "art_err_flame.h"
+#include "art_err_laser.h"
+#include "art_err_lid.h"
+#include "art_err_limit.h"
+#include "art_err_moved.h"
+#include "art_err_wifi.h"
 #include "art_error.h"
 #include "art_framing.h"
 #include "art_idle.h"
@@ -25,7 +31,13 @@ enum Screen : uint8_t {
   SCR_CUT,
   SCR_PAUSE,
   SCR_DONE,
-  SCR_ERROR,
+  SCR_ERROR, // generic warning triangle (wifi-setup mode)
+  SCR_ERR_FLAME,
+  SCR_ERR_MOVED,
+  SCR_ERR_LID,
+  SCR_ERR_LIMIT,
+  SCR_ERR_WIFI,
+  SCR_ERR_LASER,
   SCR_COUNT
 };
 
@@ -44,6 +56,12 @@ static const StateArt STATE_ART[SCR_COUNT] = {
     {art_paused::PALETTE, art_paused::PIXELS},
     {art_done::PALETTE, art_done::PIXELS},
     {art_error::PALETTE, art_error::PIXELS},
+    {art_err_flame::PALETTE, art_err_flame::PIXELS},
+    {art_err_moved::PALETTE, art_err_moved::PIXELS},
+    {art_err_lid::PALETTE, art_err_lid::PIXELS},
+    {art_err_limit::PALETTE, art_err_limit::PIXELS},
+    {art_err_wifi::PALETTE, art_err_wifi::PIXELS},
+    {art_err_laser::PALETTE, art_err_laser::PIXELS},
 };
 
 } // namespace ui

@@ -25,7 +25,11 @@
 //
 // M222 S-codes: 0 boot, 1/3 idle, 2 wifi-setup, 10/24 measuring, 11 frame-
 // ready, 12 framing, 13 job-ready, 14 processing, 15 paused, 16 fw-update,
-// 17 sleeping, 18 cancelling, 19 finished, 4/7/9/20/21/22 error family.
+// 17 sleeping, 18 cancelling, 19 finished. Error family, per xTool's own
+// support articles (support.xtool.com/article/1088, 1277, 1278, 1279):
+//   4 device moved, 7 started with lid open (or no job file), 9 FLAME
+//   detected, 20 hit position limit mid-job, 21 wifi-module<->controller
+//   comms fault, 22 laser-module<->controller comms fault.
 #pragma once
 #include <WiFi.h>
 #include <WiFiUdp.h>

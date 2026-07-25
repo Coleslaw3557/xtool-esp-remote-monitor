@@ -32,6 +32,14 @@ STATES = {
     "paused": "The buddy leans back taking a break, holding a big rounded white pause symbol made of two vertical bars, calm expression.",
     "done": "The buddy celebrates joyfully, both arms up, holding a small wooden heart shape it just cut, with colorful confetti pieces falling around it.",
     "error": "The buddy looks worried with big concerned eyes and tiny sweat drop, next to a floating soft-red rounded warning triangle with an exclamation shape inside (iconic, not typographic).",
+    # per-error avatars — committed versions are programmatic derivations of
+    # "error" (see repo history); regenerate these for fully illustrated ones
+    "err_flame": "The buddy looks alarmed with wide eyes and both stubby arms thrown up, next to one small stylized cartoon flame glowing warm orange and yellow; a floating soft-red rounded warning triangle with an exclamation shape hovers at the other side.",
+    "err_moved": "The buddy is tilted at a slight angle looking dizzy and startled, with a couple of soft pale curved motion arcs beside it; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
+    "err_lid": "The buddy's own top lid is popped wide open on a hinge and it looks sheepish and worried; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
+    "err_limit": "The buddy is pressed up against the side edge of the scene with a squished cheek and tiny pale impact stars at the contact point; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
+    "err_wifi": "The buddy looks sadly at a small white wifi-arcs symbol crossed out by a thick red diagonal slash floating beside it; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
+    "err_laser": "The buddy looks worriedly at a small yellow lightning-bolt symbol crossed out by a thick red diagonal slash floating beside it; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
 }
 
 def call(prompt, ref_png=None, retries=3):

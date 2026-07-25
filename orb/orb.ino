@@ -154,12 +154,13 @@ static UiModel pickModel(uint32_t now) {
     case 16: return {ui::SCR_IDLE, "UPDATING", false, 0, -1, true};
     case 18: return {ui::SCR_IDLE, "STOPPING", false, 0, -1, false};
     case 2: return {ui::SCR_ERROR, "SETUP MODE", false, 0, -1, true};
-    case 4:
-    case 7:
-    case 9:
-    case 20:
-    case 21:
-    case 22: return {ui::SCR_ERROR, "ERROR", false, 0, -1, false};
+    // error family, meanings per xTool's support articles (see xtool_s1.h)
+    case 9: return {ui::SCR_ERR_FLAME, "FLAME ALARM", false, 0, -1, false};
+    case 4: return {ui::SCR_ERR_MOVED, "MOVED", false, 0, -1, false};
+    case 7: return {ui::SCR_ERR_LID, "LID OPEN", false, 0, -1, false};
+    case 20: return {ui::SCR_ERR_LIMIT, "HIT LIMIT", false, 0, -1, false};
+    case 21: return {ui::SCR_ERR_WIFI, "WIFI FAULT", false, 0, -1, false};
+    case 22: return {ui::SCR_ERR_LASER, "LASER FAULT", false, 0, -1, false};
     default: return {ui::SCR_IDLE, "IDLE", false, 0, -1, false};
   }
 }

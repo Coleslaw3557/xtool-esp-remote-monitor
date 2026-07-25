@@ -65,7 +65,21 @@ against S1 firmware V40.32.013.
 | 15 paused | pause bars, frozen clock, dimmed | `PAUSED` |
 | 19 finished (held 60 s) | confetti + total time | `DONE` |
 | 16 fw update / 18 cancelling | tea break | `UPDATING` / `STOPPING` |
-| 2 wifi-setup / 4, 7, 9, 20–22 errors | warning triangle | `SETUP MODE` / `ERROR` |
+| 2 wifi-setup | warning triangle | `SETUP MODE` |
+| 9 flame detected | buddy + glowing flame | `FLAME ALARM` |
+| 4 moved | tilted buddy, motion arcs | `MOVED` |
+| 7 lid open | popped-lid box | `LID OPEN` |
+| 20 hit limit | buddy shoved into the edge | `HIT LIMIT` |
+| 21 wifi-module fault | slashed wifi symbol | `WIFI FAULT` |
+| 22 laser-module fault | slashed bolt symbol | `LASER FAULT` |
+
+Error meanings come from xTool's own support articles
+([S7](https://support.xtool.com/article/1088),
+[S9](https://support.xtool.com/article/1277),
+[S20](https://support.xtool.com/article/1278),
+[S21](https://support.xtool.com/article/1279)), so the orb names the fault
+instead of showing a generic error — a tripped flame detector reads
+`FLAME ALARM`.
 
 ## Building & flashing
 
@@ -112,6 +126,14 @@ node orb/tools/build_face_bitmap.mjs out.png orb/art_<state>.h art_<state>
 
 `orb/tools/preview_ui.cpp` renders every screen to raw RGB on the host using
 the firmware's own drawing code — check layouts before flashing anything.
+`orb/tools/decode_art.py` recovers a PNG (e.g. the `idle.png` style anchor
+gen_state_art.py needs) from a committed header when the generated sources
+are gone.
+
+The six per-error avatars (`art_err_*.h`) are currently programmatic
+derivations of the error art — same buddy, per-error pictogram composited on
+top. `gen_state_art.py` already carries scene prompts for them, so
+regenerating with the pipeline above swaps in fully illustrated versions.
 
 ![State artwork](docs/states.png)
 
