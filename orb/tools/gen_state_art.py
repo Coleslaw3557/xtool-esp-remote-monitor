@@ -34,12 +34,12 @@ STATES = {
     "error": "The buddy looks worried with big concerned eyes and tiny sweat drop, next to a floating soft-red rounded warning triangle with an exclamation shape inside (iconic, not typographic).",
     # per-error avatars — committed versions are programmatic derivations of
     # "error" (see repo history); regenerate these for fully illustrated ones
-    "err_flame": "The buddy looks alarmed with wide eyes and both stubby arms thrown up, next to one small stylized cartoon flame glowing warm orange and yellow; a floating soft-red rounded warning triangle with an exclamation shape hovers at the other side.",
-    "err_moved": "The buddy is tilted at a slight angle looking dizzy and startled, with a couple of soft pale curved motion arcs beside it; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
-    "err_lid": "The buddy's own top lid is popped wide open on a hinge and it looks sheepish and worried; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
-    "err_limit": "The buddy is pressed up against the side edge of the scene with a squished cheek and tiny pale impact stars at the contact point; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
-    "err_wifi": "The buddy looks sadly at a small white wifi-arcs symbol crossed out by a thick red diagonal slash floating beside it; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
-    "err_laser": "The buddy looks worriedly at a small yellow lightning-bolt symbol crossed out by a thick red diagonal slash floating beside it; a floating soft-red rounded warning triangle with an exclamation shape hovers nearby.",
+    "err_flame": "The buddy is dressed as a brave little firefighter: a tiny red fire helmet perched on top (goggles pushed aside) and a small red fire extinguisher held in both stubby arms, spraying a soft white puff at one small stylized orange-and-yellow cartoon flame beside it, determined worried face.",
+    "err_moved": "The buddy is tilted at a wobbly angle looking dizzy, swirly spiral eyes, stubby arms flung out to catch its balance, a few soft pale curved motion arcs around it.",
+    "err_lid": "The buddy's own top lid is popped wide open on a hinge like an open toybox, and it looks up at its lid sheepish and embarrassed, one stubby arm scratching its head.",
+    "err_limit": "The buddy is squashed up against the side edge of the scene, cheek squished flat, one arm braced against the invisible wall, tiny pale impact stars at the contact point.",
+    "err_wifi": "The buddy holds up a small droopy antenna and looks at it confused; above the antenna three broken wifi signal arcs fizzle out as tiny pale sparkle fragments.",
+    "err_laser": "The buddy is a little mechanic: tiny wrench in one stubby arm, looking worried at a small unplugged glowing orange cable it holds in the other, one tiny spark popping from the cable end.",
 }
 
 def call(prompt, ref_png=None, retries=3):
