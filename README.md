@@ -11,9 +11,11 @@ with no cloud and no ability to control the machine.
 ![All screens](docs/screens.png)
 
 *Host-rendered screens (pixel-exact: the preview tool runs the same drawing
-code the firmware does). Top: idle, job ready, framing, cutting. Middle:
-long-job countdown, paused, done, asleep. Bottom: looking for the laser, link
-lost mid-job (clock keeps running), machine error, no Wi-Fi.*
+code the firmware does). Top: idle, job ready, framing, cutting, long-job
+countdown, paused. Middle: done, asleep, looking for the laser, link lost
+mid-job (clock keeps running), no Wi-Fi, wifi-setup mode. Bottom, the error
+family: flame alarm, moved, lid open, hit position limit, wifi-module fault,
+laser-module fault.*
 
 ## Hardware
 
@@ -112,7 +114,7 @@ suspect the hardware.
 
 ## The artwork pipeline
 
-The nine state illustrations are AI-generated (one anchor image of the
+The nine core state illustrations are AI-generated (one anchor image of the
 mascot, then every other state derived from it with the anchor as a style
 reference, via OpenRouter). They're committed as palette-indexed bitmap
 headers, so builds don't need any of this — but to regenerate or add states:
