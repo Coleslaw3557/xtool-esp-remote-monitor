@@ -1,0 +1,7 @@
+# local credentials — copy orb/secrets.h.example to orb/secrets.h instead
+orb/secrets.h
+
+# build artifacts
+orb/build/
+orb/tools/preview_ui
+*.rgb
